@@ -1,0 +1,14 @@
+*.html
+*.bak
+*.swp
+__pycache__
+*.egg-info
+*.pyc
+.tox/
+
+# IDE's
+.idea
+.vscode
+
+test_coverage_annotated_source/
+test_coverage_report_html/
