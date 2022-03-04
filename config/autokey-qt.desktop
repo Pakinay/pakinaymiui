@@ -1,0 +1,11 @@
+# $Id: autokey-qt.desktop 22 2008-01-29 11:29:13Z peabody $
+[Desktop Entry]
+Name=AutoKey (Qt)
+GenericName=Keyboard Automation
+Comment=Program keyboard shortcuts
+Keywords=macros keyboard auto key autokey ak automation shortcut bind
+Exec=autokey-qt -c
+Terminal=false
+Type=Application
+Icon=autokey
+Categories=Qt;Utility;

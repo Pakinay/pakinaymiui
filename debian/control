@@ -1,0 +1,78 @@
+Source: autokey
+Maintainer: Python Applications Packaging Team <python-apps-team@lists.alioth.debian.org>
+Section: utils
+Priority: optional
+Build-Depends: debhelper-compat (= 12),
+               dh-python,
+               gir1.2-gtk-3.0,
+               pyqt5-dev-tools,
+               python3-all,
+               python3-dbus,
+               python3-gi,
+               python3-pyqt5.qsci,
+               python3-pyqt5.qtsvg,
+               python3-setuptools,
+               python3-xlib
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/python-team/applications/autokey
+Vcs-Git: https://salsa.debian.org/python-team/applications/autokey.git
+Homepage: https://github.com/autokey/autokey
+
+Package: autokey-common
+Architecture: all
+Depends: python3-dbus,
+         python3-pyinotify,
+         python3-xlib,
+         wmctrl,
+         ${misc:Depends},
+         ${python3:Depends}
+Suggests: python3-pyatspi
+Description: desktop automation utility - common data
+ AutoKey is a desktop automation utility for Linux and X11. It allows the
+ automation of virtually any task by responding to typed abbreviations and
+ hotkeys. It offers a full-featured GUI that makes it highly accessible for
+ novices, as well as a scripting interface offering the full flexibility and
+ power of the Python language.
+ .
+ This package contains the common data shared between the various frontends.
+
+Package: autokey-gtk
+Architecture: all
+Section: gnome
+Depends: autokey-common (= ${binary:Version}),
+         gir1.2-ayatanaappindicator3-0.1,
+         gir1.2-glib-2.0,
+         gir1.2-gtk-3.0,
+         gir1.2-gtksource-3.0,
+         gir1.2-notify-0.7,
+         python3-dbus,
+         python3-gi,
+         zenity,
+         ${misc:Depends},
+         ${python3:Depends}
+Description: desktop automation utility - GTK+ version
+ AutoKey is a desktop automation utility for Linux and X11. It allows the
+ automation of virtually any task by responding to typed abbreviations and
+ hotkeys. It offers a full-featured GUI that makes it highly accessible for
+ novices, as well as a scripting interface offering the full flexibility and
+ power of the Python language.
+ .
+ This package contains the GTK+ frontend.
+
+Package: autokey-qt
+Architecture: all
+Section: kde
+Depends: autokey-common (= ${binary:Version}),
+         python3-pyqt5,
+         python3-pyqt5.qsci,
+         python3-pyqt5.qtsvg,
+         ${misc:Depends},
+         ${python3:Depends}
+Description: desktop automation utility - Qt version
+ AutoKey is a desktop automation utility for Linux and X11. It allows the
+ automation of virtually any task by responding to typed abbreviations and
+ hotkeys. It offers a full-featured GUI that makes it highly accessible for
+ novices, as well as a scripting interface offering the full flexibility and
+ power of the Python language.
+ .
+ This package contains the Qt frontend.
