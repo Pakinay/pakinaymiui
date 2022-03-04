@@ -1,0 +1,10 @@
+*.html
+*.bak
+*.swp
+__pycache__
+*.egg-info
+*.pyc
+
+# IDE's
+.idea
+.vscode
